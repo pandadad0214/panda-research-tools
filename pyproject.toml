@@ -23,7 +23,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 dependencies = [
-  "panda-federation-tools @ git+https://github.com/pandadad0214/panda-federation-tools.git@v1.4.0",
+  "panda-federation-tools>=1.4.0,<2",
 ]
 
 [project.urls]
