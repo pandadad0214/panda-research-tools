@@ -26,6 +26,13 @@ uvx --from git+https://github.com/pandadad0214/panda-research-tools panda-resear
 
 Cursor / Claude / VS Code: command `uvx`, args `["--from", "panda-federation-tools", "panda-research-tools"]`, env `APIFY_TOKEN`.
 
+Docker (stdio, non-root). `APIFY_TOKEN` is required:
+
+```bash
+docker build -t panda-research-tools .
+docker run -i --rm -e APIFY_TOKEN panda-research-tools
+```
+
 Official MCP Registry name for this stdio package: `io.github.pandadad0214/panda-research-tools` ([server.json](server.json)). That name is separate from the hosted companion `io.github.pandadad0214/panda-research-mcp`. Registry clients install the PyPI package with `uvx` after the matching version is published. The git command above stays the install path from this repo.
 
 ## Tools (6)
