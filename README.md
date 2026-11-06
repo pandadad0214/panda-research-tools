@@ -1,5 +1,7 @@
 # Panda Research Tools
 
+<!-- mcp-name: io.github.pandadad0214/panda-research-tools -->
+
 **Scholarly integrity and papers: citation checks, literature and PubMed search, academic experts, PDF tables.**
 
 Focused MCP server (6 tools) from the [Panda Federation](https://github.com/pandadad0214/panda-federation-tools) public-data toolkit. Prefer this over the 23-tool mega-server for better Tool Definition Quality Score (TDQS) / Glama coherence.
@@ -23,6 +25,8 @@ uvx --from git+https://github.com/pandadad0214/panda-research-tools panda-resear
 ```
 
 Cursor / Claude / VS Code: command `uvx`, args `["--from", "panda-federation-tools", "panda-research-tools"]`, env `APIFY_TOKEN`.
+
+Official MCP Registry name for this stdio package: `io.github.pandadad0214/panda-research-tools` ([server.json](server.json)). That name is separate from the hosted companion `io.github.pandadad0214/panda-research-mcp`. Registry clients install the PyPI package with `uvx` after the matching version is published. The git command above stays the install path from this repo.
 
 ## Tools (6)
 
