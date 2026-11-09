@@ -4,6 +4,8 @@
 
 Give Claude, Cursor or any MCP client 7 research-integrity tools: catch fake or retracted citations, search OpenAlex and PubMed, find experts, pull PDF tables and find Wayback snapshots. Each tool runs one public-data Apify Actor on your own Apify account and is priced per result. Part of the [Panda Federation](https://github.com/pandadad0214/panda-federation-tools) toolkit (36 tools in four focused servers).
 
+[![PyPI](https://img.shields.io/pypi/v/panda-research-tools)](https://pypi.org/project/panda-research-tools/)
+[![Latest Release](https://img.shields.io/github/v/release/pandadad0214/panda-research-tools?label=latest%20release)](https://github.com/pandadad0214/panda-research-tools/releases/latest)
 [![Umbrella](https://img.shields.io/badge/index-panda--federation--tools-blue)](https://github.com/pandadad0214/panda-federation-tools)
 [![Apify Store](https://img.shields.io/badge/Apify_Store-pandadad0214-00a3ff)](https://apify.com/pandadad0214)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -11,15 +13,15 @@ Give Claude, Cursor or any MCP client 7 research-integrity tools: catch fake or 
 ## How to use this
 
 ```bash
-uvx --from panda-federation-tools panda-research-tools
+uvx panda-research-tools
 ```
 
 1. **Get a free Apify token** at [console.apify.com/settings/integrations](https://console.apify.com/settings/integrations) (the free plan includes $5 of monthly credit) and install [uv](https://docs.astral.sh/uv/).
-2. **Add the server to your MCP client:** command `uvx`, args `["--from", "panda-federation-tools", "panda-research-tools"]`, env `APIFY_TOKEN` (Cursor JSON below).
+2. **Add the server to your MCP client:** command `uvx`, args `["panda-research-tools"]`, env `APIFY_TOKEN` (Cursor JSON below).
 3. **Ask in plain words**, e.g. "Check these 12 references for fake or retracted papers and format the good ones in APA." Start with one or two inputs and read the `summary` / `agentSummary` line before widening.
 
 ```json
-{"mcpServers": {"panda-research-tools": {"command": "uvx", "args": ["--from", "panda-federation-tools", "panda-research-tools"], "env": {"APIFY_TOKEN": "apify_api_YOUR_TOKEN"}}}}
+{"mcpServers": {"panda-research-tools": {"command": "uvx", "args": ["panda-research-tools"], "env": {"APIFY_TOKEN": "apify_api_YOUR_TOKEN"}}}}
 ```
 
 ## For AI agents
@@ -29,7 +31,7 @@ uvx --from panda-federation-tools panda-research-tools
 | Purpose | Focused MCP server with 7 research-integrity tools: catch fake or retracted citations, search OpenAlex and PubMed, find experts, pull PDF tables and find Wayback snapshots. |
 | Use when | A task needs verified scholarly sources: citation checks, literature or PubMed search, expert finding, PDF tables or archived page snapshots. |
 | Do not use when | The task is about federal money (use `panda-public-funding-tools`), sales leads (`panda-leads-tools`) or site/email safety (`panda-web-security-tools`). |
-| Install | `uvx --from panda-federation-tools panda-research-tools` (stdio, Python 3.11+) |
+| Install | `uvx panda-research-tools` (stdio, Python 3.11+) |
 | Auth | `APIFY_TOKEN` env var; runs bill to that Apify account. |
 | Tools | 7, listed under [Tools](#tools-7) |
 | Outputs | JSON rows plus a one-line `summary` / `agentSummary`; Excel/CSV files on the Apify run. |
@@ -37,13 +39,19 @@ uvx --from panda-federation-tools panda-research-tools
 
 ## Other ways to install
 
+From the umbrella package (same tools):
+
+```bash
+uvx --from panda-federation-tools panda-research-tools
+```
+
 From this repo instead of PyPI:
 
 ```bash
 uvx --from git+https://github.com/pandadad0214/panda-research-tools panda-research-tools
 ```
 
-Cursor / Claude / VS Code: command `uvx`, args `["--from", "panda-federation-tools", "panda-research-tools"]`, env `APIFY_TOKEN`.
+Cursor / Claude / VS Code: command `uvx`, args `["panda-research-tools"]`, env `APIFY_TOKEN`.
 
 Docker (stdio, non-root). `APIFY_TOKEN` is required:
 
@@ -52,7 +60,7 @@ docker build -t panda-research-tools .
 docker run -i --rm -e APIFY_TOKEN panda-research-tools
 ```
 
-Official MCP Registry name for this stdio package: `io.github.pandadad0214/panda-research-tools` ([server.json](server.json)). That name is separate from the hosted companion `io.github.pandadad0214/panda-research-mcp`. Registry clients install the PyPI package with `uvx` after the matching version is published. The git command above stays the install path from this repo.
+Official MCP Registry name for this stdio package: `io.github.pandadad0214/panda-research-tools` ([server.json](server.json)). That name is separate from the hosted companion `io.github.pandadad0214/panda-research-mcp`. Registry clients install the PyPI package with `uvx panda-research-tools`. The git command above stays the install path from this repo.
 
 ## Tools (7)
 
