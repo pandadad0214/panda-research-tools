@@ -1,0 +1,22 @@
+{
+  "name": "panda-research-tools",
+  "version": "0.1.0",
+  "description": "Scholarly integrity MCP tools: citation checks, literature/PubMed search, experts, PDF tables, Wayback snapshots (7 tools).",
+  "contextFileName": "GEMINI.md",
+  "settings": [
+    {
+      "name": "Apify API Token",
+      "description": "Free Apify API token from https://console.apify.com/settings/integrations. Runs bill to your Apify account.",
+      "envVar": "APIFY_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "panda-research-tools": {
+      "command": "uvx",
+      "args": [
+        "panda-research-tools"
+      ]
+    }
+  }
+}

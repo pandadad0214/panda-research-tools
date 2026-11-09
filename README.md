@@ -62,6 +62,16 @@ docker run -i --rm -e APIFY_TOKEN panda-research-tools
 
 Official MCP Registry name for this stdio package: `io.github.pandadad0214/panda-research-tools` ([server.json](server.json)). That name is separate from the hosted companion `io.github.pandadad0214/panda-research-mcp`. Registry clients install the PyPI package with `uvx panda-research-tools`. The git command above stays the install path from this repo.
 
+## Use with Gemini CLI
+
+Install this repo as a [Gemini CLI extension](https://geminicli.com/docs/extensions/) (adds the MCP server plus a short `GEMINI.md` context file). Needs [Gemini CLI](https://geminicli.com/), [uv](https://docs.astral.sh/uv/), and a free [Apify token](https://console.apify.com/settings/integrations).
+
+```bash
+gemini extensions install https://github.com/pandadad0214/panda-research-tools
+```
+
+The extension prompts for `APIFY_TOKEN` on install and launches the server with `uvx panda-research-tools`. Gallery listing is automatic once this public repo carries the `gemini-cli-extension` topic and a root `gemini-extension.json` (crawled daily).
+
 ## Tools (7)
 
 - `reference_checker`

@@ -40,10 +40,11 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: server.json and glama.json are valid JSON
+      - name: server.json, glama.json, and gemini-extension.json are valid JSON
         run: |
           python3 -m json.tool server.json > /dev/null
           python3 -m json.tool glama.json > /dev/null
+          python3 -m json.tool gemini-extension.json > /dev/null
       - name: Registry description stays within MCP 100-char limit
         run: |
           python3 - <<'PY'
