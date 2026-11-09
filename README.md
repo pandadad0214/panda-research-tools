@@ -10,6 +10,8 @@ Give Claude, Cursor or any MCP client 7 research-integrity tools: catch fake or 
 [![Apify Store](https://img.shields.io/badge/Apify_Store-pandadad0214-00a3ff)](https://apify.com/pandadad0214)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
+<a href="https://launchmcp.co?utm_source=badge&utm_medium=referral" target="_blank" rel="nofollow noopener noreferrer"><img src="https://launchmcp.co/featured-badge.png?v=1" alt="Featured on Launch MCP" width="200" height="52" /></a>
+
 ## How to use this
 
 ```bash
