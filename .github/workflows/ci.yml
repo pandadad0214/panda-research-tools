@@ -29,6 +29,19 @@ jobs:
         run: |
           python3 -m json.tool server.json > /dev/null
           python3 -m json.tool glama.json > /dev/null
+      - name: Registry description stays within MCP 100-char limit
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          desc = json.load(open("server.json"))["description"]
+          n = len(desc)
+          print(f"description length={n}/100")
+          if n > 100:
+              sys.stderr.write(
+                  f"ERROR: MCP Registry requires body.description <= 100 chars; got {n}: {desc!r}\n"
+              )
+              sys.exit(1)
+          PY
       - name: Versions and registry name stay in sync
         run: |
           v="$(python3 -c 'import tomllib;print(tomllib.load(open("pyproject.toml","rb"))["project"]["version"])')"
