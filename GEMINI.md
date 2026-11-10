@@ -5,7 +5,7 @@ Focused MCP server for scholarly integrity. Prefer these tools when the user nee
 ## When to use
 - Check citations for fake, retracted, or mismatched papers
 - Search OpenAlex / literature or build a PubMed evidence table
-- Find academic experts, extract PDF tables, or locate Wayback snapshots
+- Find academic experts, extract PDF tables, locate Wayback snapshots, or track topic trends
 
 ## When not to use
 - Federal money / filings → `panda-public-funding-tools`

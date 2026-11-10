@@ -8,6 +8,9 @@ uvx panda-research-tools@{{VERSION}}
 - Official MCP Registry name: `io.github.pandadad0214/panda-research-tools`.
 
 ### Added
-- First PyPI and Official MCP Registry release of this focused domain server ({{VERSION}}).
+- `topic_trends_tracker` (moved from leads so that domain stays in the 3–15 tool band). This server now has 8 tools.
+
+### Changed
+- Syncs with panda-federation-tools 1.8.0 (40 tools across four focused servers). Requires `panda-federation-tools>=1.8.0,<2`.
 
 Full docs: [README](https://github.com/pandadad0214/panda-research-tools#readme).

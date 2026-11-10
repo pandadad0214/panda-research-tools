@@ -3,8 +3,8 @@ revision = 5
 requires-python = ">=3.11"
 resolution-markers = [
     "python_full_version >= '3.14' and sys_platform == 'emscripten'",
-    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform == 'emscripten'",
     "python_full_version >= '3.14' and sys_platform != 'emscripten'",
+    "python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform == 'emscripten'",
     "python_full_version < '3.12' or (python_full_version >= '3.12' and python_full_version < '3.14' and sys_platform != 'emscripten')",
 ]
 
@@ -351,7 +351,7 @@ wheels = [
 
 [[package]]
 name = "panda-federation-tools"
-version = "1.7.0"
+version = "1.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -359,14 +359,14 @@ dependencies = [
     { name = "jsonschema" },
     { name = "mcp" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/95/f1/920cfd7e305f6bd851cbcc31561883e40debd70b64830d77ba03bab8997c/panda_federation_tools-1.7.0.tar.gz", hash = "sha256:71819164306862eb41192fe9e5c002e0fabd4460795281f79dd50d3e882df0ab", size = 104228, upload-time = "2026-11-09T01:28:02.203Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/24/e7/a16664b262e49f6990bb59b8df7308970115770beb9c7c7d1fc5e3c08646/panda_federation_tools-1.8.0.tar.gz", hash = "sha256:c11ab70fe97b3ff14ed778ce6094e5aac8cbce12744542746d7ee9517032caad", size = 117642, upload-time = "2026-11-10T15:51:40.759Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2c/38/12066ecfc2f9c21aab27bd429f6c460d0b30036d1060fb4b2c61d0c5e0f1/panda_federation_tools-1.7.0-py3-none-any.whl", hash = "sha256:70bc770548eedf85496a1468099dd5ed03258ee3370386ad8fc1449c7a5e7888", size = 72746, upload-time = "2026-11-09T01:28:00.963Z" },
+    { url = "https://files.pythonhosted.org/packages/d9/70/ca8332ccd5517cecf8aa2d6d158707cf3db10425c190ee05d372472e0c38/panda_federation_tools-1.8.0-py3-none-any.whl", hash = "sha256:b1093bb55fec40861c82b1e2469a93fa137da4a04d5436f42b7c2760396fc101", size = 80742, upload-time = "2026-11-10T15:51:39.341Z" },
 ]
 
 [[package]]
 name = "panda-research-tools"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "panda-federation-tools" },
@@ -378,7 +378,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "panda-federation-tools", specifier = ">=1.7.0,<2" }]
+requires-dist = [{ name = "panda-federation-tools", specifier = ">=1.8.0,<2" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "ruff", specifier = "==0.17.3" }]

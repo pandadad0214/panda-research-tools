@@ -1,7 +1,7 @@
 {
   "name": "panda-research-tools",
-  "version": "0.1.0",
-  "description": "Scholarly integrity MCP tools: citation checks, literature/PubMed search, experts, PDF tables, Wayback snapshots (7 tools).",
+  "version": "0.2.0",
+  "description": "Scholarly integrity MCP tools: citation checks, literature/PubMed search, experts, PDF tables, Wayback, topic trends (8 tools).",
   "contextFileName": "GEMINI.md",
   "settings": [
     {
