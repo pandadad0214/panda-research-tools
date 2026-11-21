@@ -86,16 +86,18 @@ The extension prompts for `APIFY_TOKEN` on install and launches the server with 
 
 ## Tools (8)
 
-- `reference_checker`
-- `citation_formatter`
-- `literature_search`
-- `pubmed_evidence_table`
-- `researcher_expert_finder`
-- `pdf_table_extractor`
+- `reference_checker`: fake/AI-hallucinated and retracted citation check, then APA/MLA/BibTeX for the verified ones
+- `citation_formatter`: IDs or messy references into 6 styles, BibTeX and RIS
+- `literature_search`: real papers from OpenAlex; `mode: experts` ranks the experts on a topic
+- `pubmed_evidence_table`: evidence tables for systematic reviews and medical writers
+- `researcher_expert_finder`: ranked academic experts and KOLs (same engine as literature_search experts mode)
+- `pdf_table_extractor`: PDF tables to Excel/CSV, with bank-statement and financial-report presets
 - `wayback_snapshot_finder`
 - `topic_trends_tracker`
 
 Each tool runs one Apify Actor on your account. Empty runs are not charged per result; every call is capped by `run_max_charge_usd`. Full schemas and prices: [umbrella README](https://github.com/pandadad0214/panda-federation-tools#domain-tool-lists).
+
+No install? The hosted [Academic Research MCP Server](https://apify.com/pandadad0214/panda-research-mcp) serves 4 of these tools at one URL, and a normal run there tries one tool so you can see real output first.
 
 ## Sibling domain servers
 
